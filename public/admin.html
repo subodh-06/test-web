@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white p-4">
+        <h1 class="text-2xl">Admin</h1>
+        <button id="logoutBtn" class="bg-red-500 text-white p-2 rounded">Logout</button>
+    </header>
+    <main class="p-4">
+        <div>
+            <label for="genderFilter">Filter by gender:</label>
+            <select id="genderFilter" class="mb-2 p-2 border">
+                <option value="all">All</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div>
+            <h2 class="text-xl mb-4">Registered Users</h2>
+            <table class="table-auto w-full">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2">Name</th>
+                        <th class="px-4 py-2">Email</th>
+                        <th class="px-4 py-2">Gender</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="/src/admin.js"></script>
+    <script src="/src/auth.js"></script>
+</body>
+</html>
